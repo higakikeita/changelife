@@ -1,0 +1,16 @@
+.chat-side
+  .side-header
+    .side-header__box
+      .side-header__box__user-name けいちゃん
+      .side-header__box__menu
+        .side-header__box__menu__new-group
+          =link_to "/groups/new" do
+            %i.fa.fa-edit
+        .side-header__box__menu__edit-user
+          =link_to"/users/7096/edit" do
+            %i.fa.fa-cog
+  .groups
+    .group
+      .grpup__group-name keichan
+      .group__group-latest-message changelife
+

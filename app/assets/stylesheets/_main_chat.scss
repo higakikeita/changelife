@@ -67,7 +67,7 @@ $btn_color: #38aef0;
     padding: 20px 40px;
     background-color: #ddd;
     padding: 20px 50px 20px 40px;
-    &__new-message{
+    &__message{
       float: left;
       width: 100%;
       display: flex;
@@ -98,20 +98,21 @@ $btn_color: #38aef0;
             
           }
         }
-      &__submit-btn{
-        width: 100px;
-        height: 50px;
-        padding: 0 30px;
-        margin-left: 15px;
-        background-color:$btn_color;
-        float: right;
-        line-height: 50px;
-        color: white;
-        }  
+      
       }
   }
   
 }
+.form__submit{
+  width: 100px;
+  height: 50px;
+  padding: 0 30px;
+  margin-left: 15px;
+  background-color:$btn_color;
+  float: right;
+  line-height: 50px;
+  color: white;
+  }  
 
 
           

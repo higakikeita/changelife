@@ -6,16 +6,14 @@
     .main-header__edit-btn 
       =link_to "Edit" , "#",class:"edit-btn"
   .messages
-    test
+    = render @messages
     
   .form
-    .form__new-message
-      .form__new-message__input-box
-        .form__new-message__input-box__text 
-          %input{type:"text"}
-        .form__new-message__input-box__image
-          %label{class: "form__new-message__input-box__image"} 
-            = icon("fas","image", class:"icon")
-            %input{type:"file",class:"hidden"} 
-      .form__new-message__submit-btn SEND
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
     
